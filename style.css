@@ -7,7 +7,7 @@
     place-content: center;
     color: white;
     text-align: center;
-    margin-block: 10px;
+    margin-block: 40px;
 }
 
 img {
@@ -91,4 +91,127 @@ img {
     animation: spin 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+@keyframes fancy-spin {
+    0% {
+        transform: rotate(0turn);
+        scale: 1;
+    }
+
+    25% {
+        transform: rotate(1turn) scale(1);
+    }
+
+    50% {
+        transform: rotate(1turn) scale(1.5);
+    }
+
+    75% {
+        transform: rotate(0turn) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(0turn) scale(1);
+    }
+}
+
+.fancy-spin {
+    animation: fancy-spin 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes grow-and-shrink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.five {
+    margin-left: 100px;
+}
+
+.five {
+    animation: grow-and-shrink 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+
+@keyframes grow-and-shrink-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+
+.six {
+    margin-top: 40px;
+    margin-left: 100px;
+    animation: grow-and-shrink-2 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+.seven {
+    animation: fade-out 1s;
+    opacity: 0;
+}
+
+
+@keyframes fade-out-2 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.eight {
+    animation: fade-out-2 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px)
+    }
+
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+.nine {
+    border-radius: 50%;
+    animation: bounce 300ms alternate infinite cubic-bezier(.2, .65, .6, 1);
 }
